@@ -1,0 +1,51 @@
+<h1 id="title">{{ (character$ | async)?.data?.name }}</h1>
+<div style="margin-right: 5%; float: left">
+  <img src="{{ (character$ | async)?.data?.image }}" />
+  <div
+    style="
+      height: 10px;
+      background-color: white;
+      z-index: 20;
+      filter: drop-shadow(2px 4px 6px black);
+    "
+  ></div>
+</div>
+<div>
+  <div style="margin-top: 5%">
+    <div>
+      <h2>Data:</h2>
+      <div class="data">
+        <p><b>Universe:</b> {{ (character$ | async)?.universe }}</p>
+        <p>
+          <b>Specialization: </b
+          >{{ (character$ | async)?.data?.specialization }}
+        </p>
+        <p><b>Voice Actor: </b> {{ (character$ | async)?.data?.voiceActor }}</p>
+      </div>
+      <hr />
+      <h2>Description:</h2>
+      <p>{{ (character$ | async)?.data?.description }}</p>
+      <hr />
+      <div class="data">
+        <h2>Unlock</h2>
+        <ul>
+          <li>
+            <p><b>gold: </b>{{ (character$ | async)?.data?.unlock?.gold }}💲</p>
+          </li>
+          <li>
+            <p>
+              <b>gleanium: </b
+              >{{ (character$ | async)?.data?.unlock?.gleanium }}💳
+            </p>
+          </li>
+          <li>
+            <p>
+              <b>ticket: </b>{{ (character$ | async)?.data?.unlock?.ticket }}🎫
+            </p>
+          </li>
+        </ul>
+      </div>
+      <hr />
+    </div>
+  </div>
+</div>

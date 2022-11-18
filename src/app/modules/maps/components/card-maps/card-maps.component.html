@@ -1,0 +1,16 @@
+<div *ngFor="let map of maps$ | async">
+  <div class="card">
+    <img
+      class="card-img-top"
+      src="{{ map.data.image }}"
+      alt="{{ map.data.mapName }}"
+    />
+    <div class="card-body">
+      <h2 class="card-title">{{ map.data.mapName }}</h2>
+      <h3 class="card-subtitle">{{ map.universe }}</h3>
+      <button class="btn btn-primary btn-sm">
+        <b>See details</b>
+      </button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,24 @@
+<div
+  *ngFor="
+    let character of characters$ | async | characterFilter: (filter$ | async)
+  "
+>
+  <div class="card">
+    <img
+      class="card-img-top"
+      src="{{ character.data.image }}"
+      alt="{{ character.data.name }}"
+    />
+    <div class="card-body">
+      <h2 class="card-title">{{ character.data.name }}</h2>
+      <h3 class="card-subtitle">{{ character.universe }}</h3>
+      <button
+        class="btn btn-primary btn-sm"
+        [routerLink]="['character/info']"
+        (click)="selectCharacter(character)"
+      >
+        <b>See details</b>
+      </button>
+    </div>
+  </div>
+</div>
