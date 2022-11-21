@@ -1,11 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { firstValueFrom, Observable } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Map } from 'src/app/core/models/maps/map';
-import {
-  selectMaps,
-  selectMapsFeatures,
-} from 'src/app/state/selectors/map.selector';
+import { selectMaps } from 'src/app/state/selectors/map.selector';
 
 @Component({
   selector: 'app-card-maps',
